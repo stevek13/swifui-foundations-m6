@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LaunchView.swift
 //  CitySightsApp
 //
 //  Created by Steve Kite on 5/12/22.
@@ -11,6 +11,7 @@ struct LaunchView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
+//    LaunchView()
     }
 }
 

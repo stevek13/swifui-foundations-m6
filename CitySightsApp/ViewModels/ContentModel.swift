@@ -8,8 +8,10 @@
 import Foundation
 import CoreLocation
 
+
 class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
+    // https://betterprogramming.pub/fetch-api-keys-from-property-list-files-in-swift-4a9e092e71fa
     private var apiKey: String {
       get {
         // 1
@@ -25,6 +27,9 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
       }
     }
     var locationManager = CLLocationManager()
+    
+    @Published var restaurants = [Business]()
+    @Published var sights = [Business]()
     
     override init() {
         // init method of NSObject
@@ -62,20 +67,16 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
             
             // TODO: If we have the coordinates of the user, send into Yelp api
-//            getBusinesses(category: "arts", location: userLocation!)
-            getBusinesses(category: "restaurants", location: userLocation!)
+            getBusinesses(category: Constants.sightsKey, location: userLocation!)
+            getBusinesses(category: Constants.restaurantsKey, location: userLocation!)
         }
-        
-
-        
-
     }
     
     // MARK: Yelp API methods
     func getBusinesses(category: String, location:CLLocation) {
         
         // Create URL
-        var URLComponents = URLComponents(string: "https://api.yelp.com/v3/businesses/search")
+        var URLComponents = URLComponents(string: Constants.apiUrl)
         URLComponents?.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
@@ -99,7 +100,32 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             let dataTask = session.dataTask(with: request) { (data, response, error) in
                 // check that there isn't an error
                 if error == nil {
-                    print(response)
+                    do{
+                    //Parse JSON
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(BusinessSearch.self, from: data!)
+                        DispatchQueue.main.async {
+                            // Assign results to appropriate property
+//                            if category == Constants.sightsKey {
+//                                self.sights = result.businesses
+//                            } else if category == Constants.restaurantsKey {
+//                                self.restaurants = result.businesses
+//                            }
+                            switch category {
+                            case Constants.sightsKey:
+                                self.sights = result.businesses
+                            case Constants.restaurantsKey:
+                                self.restaurants = result.businesses
+                            default:
+                                break
+                            }
+                        }
+  
+                    } catch {
+                        
+                        print(error)
+                    }
+                    
                 }
             }
             // Start the Data Task

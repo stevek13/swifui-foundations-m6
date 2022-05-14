@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		200153F9282EC9900021AE0B /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200153F8282EC9900021AE0B /* ContentModel.swift */; };
 		2053C36D282F14150092D872 /* Yelp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2053C36C282F14150092D872 /* Yelp-Info.plist */; };
+		20F0A3A6282FCD2E00FC9699 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A3A5282FCD2E00FC9699 /* Business.swift */; };
+		20F0A3A8282FCF1F00FC9699 /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A3A7282FCF1F00FC9699 /* BusinessSearch.swift */; };
+		20F0A3AA282FD2A100FC9699 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A3A9282FD2A100FC9699 /* Constants.swift */; };
 		20F8D4C2282D3E95001D3C55 /* CitySightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F8D4C1282D3E95001D3C55 /* CitySightsApp.swift */; };
 		20F8D4C4282D3E95001D3C55 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F8D4C3282D3E95001D3C55 /* LaunchView.swift */; };
 		20F8D4C6282D3E96001D3C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F8D4C5282D3E96001D3C55 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		200153F8282EC9900021AE0B /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		2053C36C282F14150092D872 /* Yelp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yelp-Info.plist"; sourceTree = "<group>"; };
+		20F0A3A5282FCD2E00FC9699 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		20F0A3A7282FCF1F00FC9699 /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
+		20F0A3A9282FD2A100FC9699 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		20F8D4BE282D3E95001D3C55 /* CitySightsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySightsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F8D4C1282D3E95001D3C55 /* CitySightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySightsApp.swift; sourceTree = "<group>"; };
 		20F8D4C3282D3E95001D3C55 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -77,6 +83,9 @@
 		20F8D4CF282D3F37001D3C55 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				20F0A3A5282FCD2E00FC9699 /* Business.swift */,
+				20F0A3A7282FCF1F00FC9699 /* BusinessSearch.swift */,
+				20F0A3A9282FD2A100FC9699 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,8 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F8D4C4282D3E95001D3C55 /* LaunchView.swift in Sources */,
+				20F0A3A6282FCD2E00FC9699 /* Business.swift in Sources */,
 				20F8D4C2282D3E95001D3C55 /* CitySightsApp.swift in Sources */,
+				20F0A3A8282FCF1F00FC9699 /* BusinessSearch.swift in Sources */,
 				200153F9282EC9900021AE0B /* ContentModel.swift in Sources */,
+				20F0A3AA282FD2A100FC9699 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

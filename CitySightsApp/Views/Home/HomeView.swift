@@ -24,6 +24,7 @@ struct HomeView: View {
                         Spacer()
                         Text("Switch to map")
                     }
+                    .padding([.leading,.trailing], 15)
                     Divider()
                     
                     BusinessList()

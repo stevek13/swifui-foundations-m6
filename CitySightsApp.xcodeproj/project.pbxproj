@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		200153F9282EC9900021AE0B /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200153F8282EC9900021AE0B /* ContentModel.swift */; };
-		2053C36D282F14150092D872 /* Yelp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2053C36C282F14150092D872 /* Yelp-Info.plist */; };
 		205854EA283130D10054B473 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205854E9283130D10054B473 /* BusinessList.swift */; };
+		20D5D20C2854DB4400AD238A /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5D20B2854DB4400AD238A /* BusinessRow.swift */; };
+		20D5D20E2854DD2700AD238A /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5D20D2854DD2700AD238A /* BusinessSection.swift */; };
+		20D5D2102854DEDF00AD238A /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5D20F2854DEDF00AD238A /* BusinessSectionHeader.swift */; };
 		20E63ECE283018C500148AC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E63ECD283018C500148AC5 /* HomeView.swift */; };
 		20F0A3A6282FCD2E00FC9699 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A3A5282FCD2E00FC9699 /* Business.swift */; };
 		20F0A3A8282FCF1F00FC9699 /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A3A7282FCF1F00FC9699 /* BusinessSearch.swift */; };
@@ -22,8 +24,10 @@
 
 /* Begin PBXFileReference section */
 		200153F8282EC9900021AE0B /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
-		2053C36C282F14150092D872 /* Yelp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yelp-Info.plist"; sourceTree = "<group>"; };
 		205854E9283130D10054B473 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
+		20D5D20B2854DB4400AD238A /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
+		20D5D20D2854DD2700AD238A /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
+		20D5D20F2854DEDF00AD238A /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
 		20E63ECD283018C500148AC5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		20F0A3A5282FCD2E00FC9699 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		20F0A3A7282FCF1F00FC9699 /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
@@ -50,6 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				205854E9283130D10054B473 /* BusinessList.swift */,
+				20D5D20B2854DB4400AD238A /* BusinessRow.swift */,
+				20D5D20D2854DD2700AD238A /* BusinessSection.swift */,
+				20D5D20F2854DEDF00AD238A /* BusinessSectionHeader.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -80,7 +87,6 @@
 		20F8D4B5282D3E95001D3C55 = {
 			isa = PBXGroup;
 			children = (
-				2053C36C282F14150092D872 /* Yelp-Info.plist */,
 				20F8D4C0282D3E95001D3C55 /* CitySightsApp */,
 				20F8D4BF282D3E95001D3C55 /* Products */,
 			);
@@ -202,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2053C36D282F14150092D872 /* Yelp-Info.plist in Resources */,
 				20F8D4C9282D3E96001D3C55 /* Preview Assets.xcassets in Resources */,
 				20F8D4C6282D3E96001D3C55 /* Assets.xcassets in Resources */,
 			);
@@ -220,7 +225,10 @@
 				20F8D4C2282D3E95001D3C55 /* CitySightsApp.swift in Sources */,
 				20E63ECE283018C500148AC5 /* HomeView.swift in Sources */,
 				20F0A3A8282FCF1F00FC9699 /* BusinessSearch.swift in Sources */,
+				20D5D20C2854DB4400AD238A /* BusinessRow.swift in Sources */,
+				20D5D2102854DEDF00AD238A /* BusinessSectionHeader.swift in Sources */,
 				205854EA283130D10054B473 /* BusinessList.swift in Sources */,
+				20D5D20E2854DD2700AD238A /* BusinessSection.swift in Sources */,
 				200153F9282EC9900021AE0B /* ContentModel.swift in Sources */,
 				20F0A3AA282FD2A100FC9699 /* Constants.swift in Sources */,
 			);

@@ -4,10 +4,18 @@
 //
 //  Created by Steve Kite on 5/14/22.
 //
+//
+//  Business.swift
+//  City Sights App
+//
+//  Created by Christopher Ching on 2021-04-16.
+//
 
 import Foundation
 
-struct Business: Decodable, Identifiable {
+class Business: Decodable, Identifiable, ObservableObject {
+    
+    @Published var imageData: Data?
     
     var id: String?
     var alias: String?
@@ -20,12 +28,14 @@ struct Business: Decodable, Identifiable {
     var rating: Double?
     var coordinates: Coordinate?
     var transactions: [String]?
+    var price: String?
     var location: Location?
     var phone: String?
     var displayPhone: String?
     var distance: Double?
-
+    
     enum CodingKeys: String, CodingKey {
+        
         case imageUrl = "image_url"
         case isClosed = "is_closed"
         case reviewCount = "review_count"
@@ -39,9 +49,41 @@ struct Business: Decodable, Identifiable {
         case rating
         case coordinates
         case transactions
+        case price
         case location
         case phone
         case distance
+    }
+    
+    func getImageData() {
+        
+        // Check that image url isn't nil
+        guard imageUrl != nil else {
+            return
+        }
+        
+        // Download the data for the image
+        if let url = URL(string: imageUrl!) {
+            
+            // Get a session
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: url) { (data, response, error) in
+                
+                if error == nil {
+                    
+                    DispatchQueue.main.async {
+                        // Set the image data
+                        self.imageData = data!
+                    }
+                }
+            }
+            dataTask.resume()
+        }
+    }
+    
+    static func getTestData() -> Business {
+        let b = Business()
+        return b
     }
 }
 
@@ -70,8 +112,8 @@ struct Location: Decodable {
 }
 
 struct Category: Decodable {
-    var alias:String?
-    var title:String?
+    var alias: String?
+    var title: String?
 }
 
 struct Coordinate: Decodable {
